@@ -62,14 +62,26 @@ h1 em{font-style:normal}h1 span{display:block;margin-top:6px;font-size:.58em;fon
 .jump{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--s1);color:#d5d9e8;font-size:14px;font-weight:600;text-decoration:none;transition:background-color .2s,color .2s}
 .jump a:hover{background:var(--g);color:var(--gd)}
-.block{width:100%;margin-top:72px}
+.block{width:100%;margin-top:56px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g)}
 .block>h2,.band h2{margin-top:6px;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.02em;color:#fff}
-.sub{margin-top:8px;color:var(--mu);font-size:15px}.sub.lead{font-size:16px;color:#c9cee0}
+.sub{margin-top:8px;max-width:60ch;color:var(--mu);font-size:15px}.sub.lead{font-size:16px;color:#c9cee0}
 .grid{margin-top:24px;display:grid;gap:16px;list-style:none}
 .card{padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--s1);box-shadow:var(--sh)}
 .card h3{font-size:17px;font-weight:700;color:#fff}.card p{margin-top:8px;font-size:15px;color:var(--mu)}
 .n{display:flex;align-items:center;justify-content:center;width:38px;height:38px;margin-bottom:14px;border-radius:50%;background:var(--g);color:var(--gd);font-weight:700}
+.feat{margin-top:20px;list-style:none}
+.feat li{display:grid;grid-template-columns:22px 1fr;column-gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.feat li:last-child{border-bottom:0}
+.feat li::before{content:"";grid-row:1/3;width:22px;height:22px;margin-top:1px;border-radius:50%;background:rgba(53,185,114,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 5 8.6l4.5-5' fill='none' stroke='%2335b972' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.feat h3{grid-column:2;font-size:16px;color:#fff}.feat p{grid-column:2;margin-top:4px;font-size:15px;color:var(--mu)}
+.pc .card ul{margin-top:12px;list-style:none}
+.pc li{position:relative;padding:6px 0 6px 28px;font-size:15px;color:var(--mu)}
+.pc li::before{position:absolute;left:0;top:6px;font-weight:800}
+.pros li::before{content:"\2713";color:var(--g)}.cons li::before{content:"\2715";color:var(--rd)}
+.g3 .card{display:grid;grid-template-columns:38px 1fr;column-gap:14px;padding:18px 20px}
+.g3 .n{grid-row:1/3;margin:0}.g3 .card h3,.g3 .card p{grid-column:2}.g3 .card p{margin-top:4px}
+.btn.faqbtn{max-width:340px;min-height:52px;margin:16px auto 0}
 .pills{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px}
 .pills span{padding:10px 18px;border-radius:999px;font-size:14px;font-weight:700}
 .pills .up{background:rgba(53,185,114,.16);color:#5fe0a0}.pills .down{background:rgba(239,91,76,.16);color:#ff9a8f}
@@ -95,7 +107,7 @@ summary::after{content:"+";flex:none;font-size:24px;line-height:1;color:var(--g)
 details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
 .split{display:grid;gap:16px;margin-top:24px}
 .app{padding:28px;border:1px solid rgba(26,140,255,.3);border-radius:28px;background:linear-gradient(135deg,#1c3050,var(--s1))}
-.app h3{font-size:19px;color:#fff}.app p{margin-top:8px;font-size:15px;color:#c3c9dc}
+.app h3{font-size:19px;color:#fff}.app p{margin-top:8px;font-size:15px;color:#c3c9dc}.app .btn{max-width:340px;min-height:56px;margin-top:20px;padding:8px 24px}
 .contact{display:grid;gap:20px;align-items:center;margin-top:24px;padding:24px;border:1px solid var(--line);border-radius:28px;background:var(--s1);box-shadow:var(--sh)}
 .mi{display:flex;align-items:center;justify-content:center;width:52px;height:52px;margin-bottom:14px;border-radius:16px;background:rgba(53,185,114,.14);color:var(--g)}
 .contact h3{font-size:18px;color:#fff}.contact p{margin-top:6px;font-size:15px;color:var(--mu)}
@@ -116,8 +128,10 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
 .ok{width:100%;min-height:52px;margin-top:8px;border:0;border-radius:999px;background:var(--g);color:var(--gd);font:inherit;font-weight:700;cursor:pointer}
 @keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media(min-width:400px){.btn{font-size:17px}}
-@media(min-width:640px){main{padding:48px 32px 56px}.logo{width:128px;height:128px}.logo img{width:76px}h1{font-size:40px}.desc{font-size:18px}#links{margin-top:40px;gap:20px}.btn{min-height:72px;padding:8px 96px;font-size:18px}.btn.sm,.sticky .btn{padding:8px 24px}.ico{width:48px;height:48px}.ico img{width:26px}.arrow{right:30px}.block>h2,.band h2{font-size:32px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.sim{grid-template-columns:1.6fr 1fr;padding:20px}.split{grid-template-columns:1.1fr .9fr}.app{padding:36px}.contact{grid-template-columns:1.4fr 1fr;padding:32px}.bandbtns{flex-direction:row;justify-content:center}.band{padding:56px 32px}table{font-size:15px}th,td{padding:16px 20px}.sticky{display:none}.overlay{align-items:center;padding:16px}.modal{border-radius:24px;padding:32px}}
+@media(min-width:640px){.g3 .card{display:block;padding:24px}.g3 .n{margin-bottom:14px}.block{margin-top:80px}main{padding:48px 32px 56px}.logo{width:128px;height:128px}.logo img{width:76px}h1{font-size:40px}.desc{font-size:18px}#links{margin-top:40px;gap:20px}.btn{min-height:72px;padding:8px 96px;font-size:18px}.btn.sm,.sticky .btn{padding:8px 24px}.ico{width:48px;height:48px}.ico img{width:26px}.arrow{right:30px}.block>h2,.band h2{font-size:32px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.sim{grid-template-columns:1.6fr 1fr;padding:20px}.split{grid-template-columns:1.1fr .9fr}.app{padding:36px}.contact{grid-template-columns:1.4fr 1fr;padding:32px}.bandbtns{flex-direction:row;justify-content:center}.band{padding:56px 32px}table{font-size:15px}th,td{padding:16px 20px}.sticky{display:none}.overlay{align-items:center;padding:16px}.modal{border-radius:24px;padding:32px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.cta{margin-top:32px}
+.card p strong{color:#fff}
 </style>
 </head>
 <body>
@@ -149,7 +163,7 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
     <a data-link="site" target="_blank" rel="noopener noreferrer" aria-label="Website" title="Website" hidden><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="8"/><path d="M2.5 9.5h19M2.5 14.5h19M12 4c-2.5 2.5-2.5 13.5 0 16M12 4c2.5 2.5 2.5 13.5 0 16" stroke-width="1"/></svg></a>
   </div>
 
-  <div class="jump" aria-label="Jump to section"><a href="#what">What is Quotex</a><a href="#practice">Practice</a><a href="#steps">Sign up</a><a href="#compare">Demo account</a><a href="#app">App download</a><a href="#review">Review</a><a href="#faq">FAQ</a><a href="#contact-us">Contact</a></div>
+  <div class="jump" aria-label="Jump to section"><a href="#what">What is Quotex</a><a href="#practice">Practice</a><a href="#steps">Sign up</a><a href="#compare">Demo account</a><a href="#app">App download</a><a href="#review">Review</a><a href="#regions">India &amp; Pakistan</a><a href="#faq">FAQ</a><a href="#contact-us">Contact</a></div>
 
   <section class="block" aria-labelledby="what">
     <p class="eyebrow">Basics</p><h2 id="what">What is Quotex trading and how does it work?</h2>
@@ -160,6 +174,17 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
       <article class="card"><div class="n">3</div><h3>Predict the move</h3><p>Choose up or down and wait for the result.</p></article>
     </div>
     <div class="pills"><span class="up">&#9650; Price goes up</span><span class="down">&#9660; Price goes down</span><small>Demo practice only. Real trades carry real risk.</small></div>
+  </section>
+
+  <section class="block" aria-labelledby="steps">
+    <p class="eyebrow">How to start</p><h2 id="steps">How to register on Quotex in 3 steps</h2>
+    <p class="sub">Take it slowly. There is no rush to deposit.</p>
+    <ol class="grid g3">
+      <li class="card"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and a password. It only takes a few minutes.</p></li>
+      <li class="card"><div class="n">2</div><h3>Practice on the demo</h3><p>Place practice trades with virtual funds until you understand how everything works.</p></li>
+      <li class="card"><div class="n">3</div><h3>Decide for yourself</h3><p>Only think about depositing real money if you understand the risks and can afford to lose it.</p></li>
+    </ol>
+    <div class="cta"><a class="btn primary" href="https://broker-qx.pro/sign-up/?lid=2379200" data-link="register" target="_blank" rel="sponsored noopener noreferrer">Register on Quotex</a></div>
   </section>
 
 
@@ -184,23 +209,12 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
   <section class="block" aria-labelledby="why">
     <p class="eyebrow">Overview</p><h2 id="why">Why beginners start with Quotex</h2>
     <p class="sub">A quick, honest look at what the platform offers. Features and availability can differ by country.</p>
-    <div class="grid g2">
-      <article class="card"><h3>Simple, clean interface</h3><p>The trading screen is easy to read, so you can focus on learning how charts and trades work instead of fighting the layout.</p></article>
-      <article class="card"><h3>Free demo account</h3><p>Practice with virtual money first. A demo lets you test ideas and get comfortable without risking your own funds.</p></article>
-      <article class="card"><h3>Works on phone and computer</h3><p>Use it in your browser on a laptop, or on your phone, so you can learn at your own pace wherever you are.</p></article>
-      <article class="card"><h3>Many markets in one place</h3><p>Browse currencies, commodities and other assets from a single account. What you can access depends on where you live.</p></article>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="steps">
-    <p class="eyebrow">How to start</p><h2 id="steps">How to register on Quotex in 3 steps</h2>
-    <p class="sub">Take it slowly. There is no rush to deposit.</p>
-    <ol class="grid g3">
-      <li class="card"><div class="n">1</div><h3>Create your account</h3><p>Sign up with your email and a password. It only takes a few minutes.</p></li>
-      <li class="card"><div class="n">2</div><h3>Practice on the demo</h3><p>Place practice trades with virtual funds until you understand how everything works.</p></li>
-      <li class="card"><div class="n">3</div><h3>Decide for yourself</h3><p>Only think about depositing real money if you understand the risks and can afford to lose it.</p></li>
-    </ol>
-    <div class="cta"><a class="btn primary" href="https://broker-qx.pro/sign-up/?lid=2379200" data-link="register" target="_blank" rel="sponsored noopener noreferrer">Register on Quotex</a></div>
+    <ul class="feat">
+      <li><h3>Simple, clean interface</h3><p>The trading screen is easy to read, so you can focus on learning how charts and trades work instead of fighting the layout.</p></li>
+      <li><h3>Free demo account</h3><p>Practice with virtual money first. A demo lets you test ideas and get comfortable without risking your own funds.</p></li>
+      <li><h3>Works on phone and computer</h3><p>Use it in your browser on a laptop, or on your phone, so you can learn at your own pace wherever you are.</p></li>
+      <li><h3>Many markets in one place</h3><p>Browse currencies, commodities and other assets from a single account. What you can access depends on where you live.</p></li>
+    </ul>
   </section>
 
   <section class="block" aria-labelledby="compare">
@@ -226,10 +240,7 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
 
   <section class="block" aria-labelledby="review">
     <p class="eyebrow">Review</p><h2 id="review">Quotex broker review: pros and cons</h2>
-    <div class="grid g2">
-      <article class="card"><h3>Pros</h3><p>Simple platform for beginners. Free demo account to practice. Works in a browser and on mobile. Quick sign-up.</p></article>
-      <article class="card"><h3>Cons</h3><p>High risk of losing money. Not available or allowed in every country. Demo results do not predict real results. Verification and payment terms apply. Some app reviews mention slow deposits or withdrawals.</p></article>
-    </div>
+    <div class="grid g2 pc"><article class="card pros"><h3>Pros</h3><ul><li>Simple platform for beginners</li><li>Free demo account to practice</li><li>Works in a browser and on mobile</li><li>Quick sign-up</li></ul></article><article class="card cons"><h3>Cons</h3><ul><li>High risk of losing money</li><li>Not available or allowed in every country</li><li>Demo results do not predict real results</li><li>Verification and payment terms apply</li><li>Some app reviews mention slow deposits or withdrawals</li></ul></article></div>
   </section>
 
   <section class="block" aria-labelledby="risks">
@@ -237,8 +248,23 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
     <div class="warn"><h3>Read this first</h3><ul>
       <li>You can lose all the money you put in.</li>
       <li>Only trade with money you can afford to lose.</li>
-      <li>You must be 18 or older, and the service is not available in every country.</li>
+      <li>You must be 18 or older. Quotex says its services are not available in the USA, Canada and some other countries.</li>
       <li>Demo results do not guarantee real results.</li></ul></div>
+  </section>
+
+  <section class="block" aria-labelledby="regions-h" id="regions">
+    <p class="eyebrow">By country</p><h2 id="regions-h">Quotex in India and Pakistan: what to know</h2>
+    <p class="sub">Rules and availability depend on where you live and can change. This is general information, not legal advice.</p>
+    <div class="grid g2">
+      <article class="card"><h3>Quotex in India</h3>
+        <p><strong>Currency:</strong> at the time of writing, the sign-up form lists INR (Indian rupee) among its account currencies. Check the form when you register.</p>
+        <p><strong>Language:</strong> English, and Quotex also lists a Hindi version of its pages.</p>
+        <p><strong>Local rules:</strong> regulators such as the RBI and SEBI have warned the public about unregistered online trading platforms. Check their official websites for current rules and ask for independent advice if unsure.</p></article>
+      <article class="card"><h3>Quotex in Pakistan</h3>
+        <p><strong>Currency:</strong> at the time of writing, the sign-up form lists PKR (Pakistani rupee) among its account currencies. Check the form when you register.</p>
+        <p><strong>Language:</strong> English, and Quotex also lists an Urdu version of its pages.</p>
+        <p><strong>Local rules:</strong> online trading is overseen by bodies such as the State Bank of Pakistan and the SECP. Check their official websites for current rules and ask for independent advice if unsure.</p></article>
+    </div>
   </section>
 
   <section class="block" aria-labelledby="faq">
@@ -249,6 +275,7 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
 <details><summary>Can I lose money on Quotex?</summary><p>Yes. Trading is risky and you can lose all the money you put in. Never trade with money you need for rent, food, bills or savings.</p></details>
 <details><summary>Is Quotex legal in my country?</summary><p>It depends on where you live. Some countries restrict or ban this kind of trading, and the platform is not available everywhere. Check your local laws and regulator warnings before you register.</p></details>
 <details><summary>What is the minimum deposit and how do withdrawals work?</summary><p>Amounts, fees and processing times can change and may depend on the payment method and account verification. Always check the current terms on the Quotex platform before you deposit.</p></details>
+<div id="faqMore" hidden>
 <details><summary>Can I use Quotex on my phone?</summary><p>Yes. You can use the platform in a phone browser, and Quotex also offers a mobile app. Check the official store listing for your device.</p></details>
 <details><summary>What is Quotex?</summary><p>Quotex is an online trading platform where you predict whether a market price will go up or down. Beginners can practice on a free demo account before deciding anything else.</p></details>
 <details><summary>How do I log in to Quotex?</summary><p>Use the Log In button on this page, then enter your email and password. If you forgot your password, use the reset option on the Quotex login screen.</p></details>
@@ -258,6 +285,24 @@ details p{padding:0 22px 20px;font-size:15px;color:var(--mu)}
 <details><summary>Is it spelled Quotex or Qutex?</summary><p>The correct name is Quotex. People sometimes type Qutex or Qortex when they search, but they mean the same platform.</p></details>
 <details><summary>Do I need to download Quotex to trade?</summary><p>No. You can use Quotex in your browser on a phone or computer. The app is optional, and you should only download it from an official store.</p></details>
 <details><summary>What is Quotex broker?</summary><p>Quotex broker is how many people search for the Quotex online trading platform. You pick a market, choose an amount and a time, and predict whether the price goes up or down. Rules and regulation differ by country, so check that it is allowed where you live before you register.</p></details>
+</div>
+<button type="button" class="btn faqbtn" id="faqBtn" aria-expanded="false" aria-controls="faqMore">Show more questions</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="cta"><a class="btn primary" href="https://broker-qx.pro/sign-up/?lid=2379200" data-link="website" target="_blank" rel="sponsored noopener noreferrer">Open Quotex</a></div>
   </section>
 
@@ -362,6 +407,13 @@ const CONFIG = {
     try { await navigator.clipboard.writeText(m); }
     catch { const t = document.createElement('textarea'); t.value = m; document.body.append(t); t.select(); try { document.execCommand('copy'); } catch {} t.remove(); }
     cp.textContent = 'Copied!'; setTimeout(() => cp.textContent = 'Copy email address', 1800);
+  });
+
+  /* ---- FAQ show more ---- */
+  const fm = $('faqMore'), fb = $('faqBtn');
+  if (fm && fb) fb.addEventListener('click', () => {
+    const open = fm.hidden; fm.hidden = !open; fb.setAttribute('aria-expanded', open);
+    fb.textContent = open ? 'Show fewer questions' : 'Show more questions';
   });
 
   /* ---- practice simulator (random, pauses when off-screen) ---- */
